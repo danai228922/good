@@ -18,101 +18,123 @@
     async function sendShare() {
       const result = await liff.shareTargetPicker([
         {
-          "type": "flex",
-          "altText": "Flex Message",
-          "contents": {
-            "type": "bubble",
-            "body": {
-              "type": "box",
-              "layout": "vertical",
-              "spacing": "md",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "BROWN'S ADVENTURE",
-                  "size": "xl",
-                  "gravity": "center",
-                  "weight": "bold",
-                  "wrap": true
-                },
-                {
-                  "type": "box",
-                  "layout": "vertical",
-                  "spacing": "sm",
-                  "margin": "lg",
-                  "contents": [
-                    {
-                      "type": "box",
-                      "layout": "baseline",
-                      "spacing": "sm",
-                      "contents": [
-                        {
-                          "type": "text",
-                          "text": "Date",
-                          "flex": 1,
-                          "size": "sm",
-                          "color": "#AAAAAA"
-                        },
-                        {
-                          "type": "text",
-                          "text": "Monday 25, 9:00PM",
-                          "flex": 4,
-                          "size": "sm",
-                          "color": "#666666",
-                          "wrap": true
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "layout": "baseline",
-                      "spacing": "sm",
-                      "contents": [
-                        {
-                          "type": "text",
-                          "text": "Place",
-                          "flex": 1,
-                          "size": "sm",
-                          "color": "#AAAAAA"
-                        },
-                        {
-                          "type": "text",
-                          "text": "LINE Thailand",
-                          "flex": 4,
-                          "size": "sm",
-                          "color": "#666666",
-                          "wrap": true
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "margin": "xxl",
-                      "contents": [
-                        {
-                          "type": "spacer"
-                        },
-                        {
-                          "type": "image",
-                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/linecorp_code_withborder.png",
-                          "size": "xl",
-                          "aspectMode": "cover"
-                        },
-                        {
-                          "type": "text",
-                          "text": "You can enter the theater by using this code instead of a ticket",
-                          "margin": "xxl",
-                          "size": "xs",
-                          "color": "#AAAAAA",
-                          "wrap": true
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+          "type": "bubble",
+          "hero": {
+            "type": "image",
+            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_2_restaurant.png",
+            "size": "full",
+            "aspectRatio": "20:13",
+            "aspectMode": "cover",
+            "action": {
+              "type": "uri",
+              "label": "Action",
+              "uri": "https://linecorp.com"
             }
+          },
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "md",
+            "action": {
+              "type": "uri",
+              "label": "Action",
+              "uri": "https://linecorp.com"
+            },
+            "contents": [
+              {
+                "type": "text",
+                "text": "Brown's Burger",
+                "weight": "bold",
+                "size": "xl",
+                "contents": []
+              },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "contents": [
+                      {
+                        "type": "icon",
+                        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/restaurant_regular_32.png"
+                      },
+                      {
+                        "type": "text",
+                        "text": "$10.5",
+                        "weight": "bold",
+                        "margin": "sm",
+                        "contents": []
+                      },
+                      {
+                        "type": "text",
+                        "text": "400kcl",
+                        "size": "sm",
+                        "color": "#AAAAAA",
+                        "align": "end",
+                        "contents": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "contents": [
+                      {
+                        "type": "icon",
+                        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/restaurant_large_32.png"
+                      },
+                      {
+                        "type": "text",
+                        "text": "$15.5",
+                        "weight": "bold",
+                        "flex": 0,
+                        "margin": "sm",
+                        "contents": []
+                      },
+                      {
+                        "type": "text",
+                        "text": "550kcl",
+                        "size": "sm",
+                        "color": "#AAAAAA",
+                        "align": "end",
+                        "contents": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Sauce, Onions, Pickles, Lettuce & Cheese",
+                "size": "xxs",
+                "color": "#AAAAAA",
+                "wrap": true,
+                "contents": []
+              }
+            ]
+          },
+          "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "spacer",
+                "size": "xxl"
+              },
+              {
+                "type": "button",
+                "action": {
+                  "type": "uri",
+                  "label": "Add to Cart",
+                  "uri": "https://linecorp.com"
+                },
+                "color": "#905C44",
+                "style": "primary"
+              }
+            ]
           }
         }
       ])
